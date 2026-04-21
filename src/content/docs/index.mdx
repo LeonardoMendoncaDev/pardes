@@ -1,40 +1,42 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: PARDES
+description: Metodologia hermenêutica de desenvolvimento orientado pela intenção, por Leonardo Mendonça.
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
+  tagline: Peshat, Remez, Drash, Sod — as quatro camadas da intenção no software.
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Ler o manifesto
+      link: /manifesto/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
+    - text: Começar em 1 dia
+      link: /metodo/onboarding/
+      icon: right-arrow
       variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+## Porquê PARDES
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+	<Card title="A intenção primeiro" icon="star">
+		O único acto exclusivamente humano no desenvolvimento de software é a intenção.
+		Tudo o resto é uma cadeia de specs que pode ser derivada, criticada e revisitada.
 	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
+	<Card title="Quinze passos encadeados" icon="list-format">
+		Do Propósito à Evolução, quinze passos alternando spec e execução,
+		da intenção literal à operação emergente.
 	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	<Card title="Hermenêutica aplicada" icon="open-book">
+		PaRDeS — Peshat, Remez, Drash, Sod. Quatro camadas de leitura
+		da tradição interpretativa judaica aplicadas ao ciclo de vida do software.
 	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	<Card title="Para profissionais" icon="rocket">
+		Não é waterfall. Não é documentação burocrática. É disciplina de artesão
+		que sabe que o código é um artefacto entre muitos.
 	</Card>
 </CardGrid>
+
+---
+
+*PARDES é uma metodologia criada por [Leonardo Mendonça](/sobre-o-autor/), arquitecto de software.*

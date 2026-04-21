@@ -1,0 +1,23 @@
+/* PARDES — estilo próprio mínimo. Evoluiremos quando tivermos design definido. */
+
+:root {
+	--sl-color-accent: #4a3b7c;
+	--sl-color-accent-high: #6d58b3;
+	--sl-color-accent-low: #1e1636;
+}
+
+/* Tipografia mais próxima de texto literário para combinar com o tom hermenêutico */
+html[data-theme='dark'] {
+	--sl-color-text-accent: var(--sl-color-accent-high);
+}
+
+/* Lead do manifesto */
+.manifesto-lead {
+	font-size: 1.25rem;
+	line-height: 1.6;
+	font-style: italic;
+	color: var(--sl-color-text-accent);
+	margin: 2rem 0;
+	border-left: 3px solid var(--sl-color-accent);
+	padding-left: 1rem;
+}
