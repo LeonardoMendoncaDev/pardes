@@ -11,7 +11,9 @@ export default defineConfig({
 			description: 'Metodologia hermenêutica de desenvolvimento orientado pela intenção, por Leonardo Mendonça.',
 			defaultLocale: 'root',
 			locales: {
-				root: { label: 'Português', lang: 'pt-PT' },
+				root: { label: 'Português (PT)', lang: 'pt-PT' },
+				'pt-br': { label: 'Português (BR)', lang: 'pt-BR' },
+				'en': { label: 'English', lang: 'en' },
 			},
 			head: [
 				// Open Graph — preview em LinkedIn, WhatsApp, Slack, etc.
@@ -43,25 +45,52 @@ export default defineConfig({
 			sidebar: [
 				{
 					label: 'PARDES',
+					translations: { 'pt-BR': 'PARDES', 'en': 'PARDES' },
 					collapsed: false,
 					items: [
-						{ label: 'Manifesto', link: '/manifesto/' },
-						{ label: 'Sobre o nome', link: '/sobre-o-nome/' },
+						{
+							label: 'Manifesto',
+							translations: { 'pt-BR': 'Manifesto', 'en': 'Manifesto' },
+							link: '/manifesto/',
+						},
+						{
+							label: 'Sobre o nome',
+							translations: { 'pt-BR': 'Sobre o nome', 'en': 'About the name' },
+							link: '/sobre-o-nome/',
+						},
 						{
 							label: 'O método',
+							translations: { 'pt-BR': 'O método', 'en': 'The method' },
 							collapsed: false,
 							items: [
-								{ label: 'Onboarding em 1 dia', link: '/metodo/onboarding/' },
-								{ label: 'A cadeia de 15 passos', link: '/metodo/cadeia/' },
-								{ label: 'O teste das 3 frases', link: '/metodo/teste-3-frases/' },
+								{
+									label: 'Onboarding em 1 dia',
+									translations: { 'pt-BR': 'Onboarding em 1 dia', 'en': 'Onboarding in 1 day' },
+									link: '/metodo/onboarding/',
+								},
+								{
+									label: 'A cadeia de 15 passos',
+									translations: { 'pt-BR': 'A cadeia de 15 passos', 'en': 'The 15-step chain' },
+									link: '/metodo/cadeia/',
+								},
+								{
+									label: 'O teste das 3 frases',
+									translations: { 'pt-BR': 'O teste das 3 frases', 'en': 'The three-sentence test' },
+									link: '/metodo/teste-3-frases/',
+								},
 							],
 						},
 					],
 				},
 				{
 					label: 'Sobre',
+					translations: { 'pt-BR': 'Sobre', 'en': 'About' },
 					items: [
-						{ label: 'Sobre o autor', link: '/sobre-o-autor/' },
+						{
+							label: 'Sobre o autor',
+							translations: { 'pt-BR': 'Sobre o autor', 'en': 'About the author' },
+							link: '/sobre-o-autor/',
+						},
 					],
 				},
 			],
