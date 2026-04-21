@@ -7,8 +7,8 @@ export default defineConfig({
 	site: 'https://pardes.pro',
 	integrations: [
 		starlight({
-			title: 'Leonardo Mendonça',
-			description: 'Arquitecto de software. Autor da metodologia PARDES — hermenêutica aplicada ao desenvolvimento orientado pela intenção.',
+			title: 'PARDES',
+			description: 'Metodologia hermenêutica de desenvolvimento orientado pela intenção, por Leonardo Mendonça.',
 			defaultLocale: 'root',
 			locales: {
 				root: { label: 'Português', lang: 'pt-PT' },
