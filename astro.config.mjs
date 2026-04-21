@@ -7,11 +7,11 @@ export default defineConfig({
 	site: 'https://pardes.pro',
 	integrations: [
 		starlight({
-			title: 'PARDES',
-			description: 'Metodologia hermenêutica de desenvolvimento orientado pela intenção, por Leonardo Mendonça.',
-			defaultLocale: 'pt',
+			title: 'Leonardo Mendonça',
+			description: 'Arquitecto de software. Autor da metodologia PARDES — hermenêutica aplicada ao desenvolvimento orientado pela intenção.',
+			defaultLocale: 'root',
 			locales: {
-				pt: { label: 'Português', lang: 'pt-PT' },
+				root: { label: 'Português', lang: 'pt-PT' },
 			},
 			social: [
 				{
@@ -25,19 +25,26 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
-					label: 'Início',
+					label: 'PARDES',
+					collapsed: false,
 					items: [
 						{ label: 'Manifesto', link: '/manifesto/' },
 						{ label: 'Sobre o nome', link: '/sobre-o-nome/' },
-						{ label: 'Sobre o autor', link: '/sobre-o-autor/' },
+						{
+							label: 'O método',
+							collapsed: false,
+							items: [
+								{ label: 'Onboarding em 1 dia', link: '/metodo/onboarding/' },
+								{ label: 'A cadeia de 15 passos', link: '/metodo/cadeia/' },
+								{ label: 'O teste das 3 frases', link: '/metodo/teste-3-frases/' },
+							],
+						},
 					],
 				},
 				{
-					label: 'O método',
+					label: 'Sobre',
 					items: [
-						{ label: 'Onboarding em 1 dia', link: '/metodo/onboarding/' },
-						{ label: 'A cadeia de 15 passos', link: '/metodo/cadeia/' },
-						{ label: 'O teste das 3 frases', link: '/metodo/teste-3-frases/' },
+						{ label: 'Sobre o autor', link: '/sobre-o-autor/' },
 					],
 				},
 			],

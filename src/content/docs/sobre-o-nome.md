@@ -18,7 +18,7 @@ A aplicação deste acrónimo à interpretação das escrituras está documentad
 
 O trabalho de construir um sistema de software a partir de uma intenção humana tem, para quem o pratica, quatro camadas muito semelhantes. Há aquilo que o sistema é dito que deve ser — a sua *peshat*. Há aquilo que se entende que ele implica, mesmo que o propósito original não o tenha articulado — a sua *remez*. Há aquilo que precisa de ser decidido, escrito, testado e mantido para que exista como realidade material — a sua *drash*. E há aquilo que só emerge quando o sistema entra em operação, vive entre utilizadores reais e passa a ensinar sobre si próprio — a sua *sod*.
 
-O método PARDES organiza explicitamente estas quatro camadas numa cadeia de quinze passos concretos, alternando spec e execução. Cada camada corresponde a um conjunto de specs e acções. Nenhuma camada é opcional. Nenhuma pode ser resolvida antes da anterior estar razoavelmente estável.
+O método PARDES organiza explicitamente estas quatro camadas numa cadeia de quinze passos concretos, alternando spec e execução. Cada camada corresponde a um conjunto de specs e acções. Nenhuma das camadas desaparece — todas estão sempre implícitas na leitura de um sistema vivo. Mas o detalhe explícito com que cada uma é escrita varia com a maturidade, o risco e a reversibilidade em jogo. A ordem é taxonómica, não sequencial: avanças para uma camada quando a anterior está suficientemente estável para não gerar decisões erradas, e recuas sempre que uma nova informação mostrar que a camada de trás precisa de reabrir.
 
 ## O respeito devido à origem
 

@@ -23,4 +23,9 @@ Site local em `http://localhost:4321`.
 
 ## Licença
 
-MIT — ver `LICENSE`.
+Este projecto usa **licença dupla**:
+
+- **Código** (configuração Astro, CSS, *scripts*, tudo fora de `src/content/docs/`): [MIT](LICENSE)
+- **Conteúdo** (ficheiros em `src/content/docs/` — manifesto, páginas da metodologia, artigos): [Creative Commons Attribution 4.0 International (CC BY 4.0)](LICENSE-CONTENT)
+
+A licença CC BY 4.0 permite qualquer uso, incluindo comercial, **desde que atribuída a autoria** a Leonardo Mendonça com ligação a este site. Copiar, traduzir, adaptar, ensinar, citar em livros ou cursos — tudo permitido, com atribuição.
