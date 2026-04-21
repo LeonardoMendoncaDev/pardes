@@ -3,6 +3,8 @@ title: Onboarding em 1 dia
 description: Guia autocontido para um desenvolvedor sênior arrancar com PARDES em 8 horas, com exercício prático e armadilhas a evitar.
 ---
 
+<div class="metodo-page">
+
 > **Audiência:** desenvolvedor sênior (5+ anos) que nunca trabalhou formalmente com Spec Driven Development. Pressupõe à vontade com *git*, uma linguagem moderna, e um agente de código (Claude Code, Cursor, Windsurf, Copilot). Não pressupõe conhecimento de Clean Architecture, DDD nem TDD — ajuda, não é requisito.
 >
 > **Objetivo do dia:** ao final de 8 horas, você terá um *workspace* PARDES próprio, uma spec de Propósito preenchida para um projeto real seu, e uma primeira fatia vertical implementada sob disciplina PARDES. Não vai dominar a metodologia — vai ter o **loop fundamental** rodando e um guia para aprofundar depois.
@@ -412,3 +414,5 @@ Se você trava por mais de 20 minutos na mesma dúvida, abra canal. O custo da p
 ---
 
 *Este documento é o início. Não é manual completo. Evolui com a prática — quando descobrir uma armadilha que aqui não está, avise; quando descobrir um sinal de sucesso extra, avise. É seu.*
+
+</div>

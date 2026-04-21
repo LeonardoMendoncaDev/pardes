@@ -1,0 +1,194 @@
+/* ============================================
+   PARDES — estilo Head First para páginas /metodo/*
+   Paleta expandida + callouts + diálogos + exercícios + trap signs
+   ============================================ */
+
+/* Paleta — tons sóbrios, pastéis suaves */
+:root {
+	--hf-sticky: #fbf4dd;
+	--hf-sticky-border: #c5a94d;
+	--hf-tip: #e2ecdc;
+	--hf-tip-border: #6b8a5c;
+	--hf-trap: #f1dbd2;
+	--hf-trap-border: #a85e48;
+	--hf-ink: #2b2833;
+	--hf-paper: #fcfaf4;
+}
+
+html[data-theme='dark'] {
+	--hf-sticky: #3a3420;
+	--hf-sticky-border: #9c8540;
+	--hf-tip: #2d3a2a;
+	--hf-tip-border: #7a9a6a;
+	--hf-trap: #3e2720;
+	--hf-trap-border: #b87a63;
+	--hf-ink: #e9e9e3;
+	--hf-paper: #1d1a25;
+}
+
+/* ============================================
+   EXERCÍCIOS — "Para aplicar agora"
+   ============================================ */
+
+.exercise {
+	margin: 2rem 0;
+	padding: 1.5rem;
+	background: var(--hf-sticky);
+	border-left: 5px solid var(--hf-sticky-border);
+	border-radius: 4px;
+	color: var(--hf-ink);
+	position: relative;
+	box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.08);
+}
+
+.exercise::before {
+	content: "Exercício";
+	position: absolute;
+	top: -0.6rem;
+	left: 1rem;
+	background: var(--hf-sticky-border);
+	color: #fff;
+	padding: 0.2rem 0.7rem;
+	border-radius: 3px;
+	font-size: 0.7rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.exercise h4 {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+	font-size: 1.1rem;
+	color: var(--hf-ink);
+}
+
+.exercise p {
+	margin: 0.5rem 0;
+	color: var(--hf-ink);
+}
+
+.exercise details {
+	margin-top: 1rem;
+	padding: 0.75rem;
+	background: rgba(255, 255, 255, 0.4);
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+html[data-theme='dark'] .exercise details {
+	background: rgba(0, 0, 0, 0.3);
+}
+
+.exercise details summary {
+	font-weight: 600;
+	color: var(--hf-ink);
+	font-size: 0.9rem;
+}
+
+.exercise details[open] summary {
+	margin-bottom: 0.5rem;
+}
+
+/* ============================================
+   TRAP — "Armadilha comum"
+   ============================================ */
+
+.trap {
+	margin: 1.5rem 0;
+	padding: 1rem 1.25rem;
+	background: var(--hf-trap);
+	border-left: 5px solid var(--hf-trap-border);
+	border-radius: 4px;
+	color: var(--hf-ink);
+	position: relative;
+}
+
+.trap::before {
+	content: "Armadilha comum";
+	display: block;
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	color: var(--hf-trap-border);
+	margin-bottom: 0.5rem;
+	text-transform: uppercase;
+}
+
+.trap p,
+.trap strong {
+	color: var(--hf-ink);
+}
+
+.trap p {
+	margin: 0.3rem 0;
+}
+
+/* ============================================
+   CHECKLIST — "Antes de avançar"
+   ============================================ */
+
+.checklist {
+	margin: 2rem 0;
+	padding: 1.25rem 1.5rem;
+	background: var(--hf-tip);
+	border-left: 5px solid var(--hf-tip-border);
+	border-radius: 4px;
+	color: var(--hf-ink);
+}
+
+.checklist::before {
+	content: "Antes de avançar";
+	display: block;
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	color: var(--hf-tip-border);
+	margin-bottom: 0.75rem;
+	text-transform: uppercase;
+}
+
+.checklist ul {
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+}
+
+.checklist li {
+	padding: 0.3rem 0 0.3rem 2rem;
+	position: relative;
+	color: var(--hf-ink);
+}
+
+.checklist li::before {
+	content: "☐";
+	position: absolute;
+	left: 0.5rem;
+	font-size: 1.1rem;
+	color: var(--hf-tip-border);
+}
+
+/* ============================================
+   Estilo geral — mistura serif (títulos) + sans (corpo)
+   Aplicado apenas em páginas /metodo/*
+   ============================================ */
+
+.metodo-page h1,
+.metodo-page h2,
+.metodo-page h3 {
+	font-family: Georgia, "Times New Roman", serif;
+	font-weight: 500;
+}
+
+.metodo-page p,
+.metodo-page li {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+}
+
+.metodo-page blockquote {
+	border-left: 4px solid var(--sl-color-accent);
+	padding-left: 1rem;
+	font-style: italic;
+	color: var(--sl-color-gray-3);
+}
+

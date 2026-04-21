@@ -3,6 +3,8 @@ title: Onboarding in 1 day
 description: A self-contained guide for a senior developer to get started with PARDES in 8 hours, with practical exercise and pitfalls to avoid.
 ---
 
+<div class="metodo-page">
+
 > **Audience:** senior developer (5+ years) who has never formally worked with Spec Driven Development. Assumes comfort with *git*, a modern language, and a code agent (Claude Code, Cursor, Windsurf, Copilot). Does not assume knowledge of Clean Architecture, DDD, or TDD — helpful, not required.
 >
 > **Goal of the day:** by the end of 8 hours, you will have your own PARDES *workspace*, a Purpose spec filled in for a real project of yours, and a first vertical slice implemented under PARDES discipline. You will not master the methodology — you will have the **fundamental loop** running and a guide to deepen later.
@@ -412,3 +414,5 @@ If you get stuck for more than 20 minutes on the same question, open a channel. 
 ---
 
 *This document is the beginning. It is not a complete manual. It evolves with practice — when you discover a pitfall that is not here, let me know; when you discover an extra sign of success, let me know. It is yours.*
+
+</div>

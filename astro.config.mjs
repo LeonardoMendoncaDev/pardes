@@ -11,9 +11,9 @@ export default defineConfig({
 			description: 'Metodologia hermenêutica de desenvolvimento orientado pela intenção, por Leonardo Mendonça.',
 			defaultLocale: 'root',
 			locales: {
-				root: { label: 'Português (PT)', lang: 'pt-PT' },
-				'pt-br': { label: 'Português (BR)', lang: 'pt-BR' },
-				'en': { label: 'English', lang: 'en' },
+				root: { label: '🇵🇹 PT', lang: 'pt-PT' },
+				'pt-br': { label: '🇧🇷 BR', lang: 'pt-BR' },
+				'en': { label: '🇬🇧 EN', lang: 'en' },
 			},
 			head: [
 				// Open Graph — preview em LinkedIn, WhatsApp, Slack, etc.
@@ -96,6 +96,7 @@ export default defineConfig({
 			],
 			customCss: [
 				'./src/styles/custom.css',
+				'./src/styles/headfirst.css',
 			],
 		}),
 	],
