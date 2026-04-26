@@ -13,7 +13,7 @@ The chain is not a rigid sequence. It is a **taxonomy** — a map of what exists
 
 | Step | Type | Name | PaRDeS Layer |
 |------|------|------|---------------|
-| 1-2 | Spec | Purpose | Peshat (literal) |
+| 1-2 | Spec | Intent | Peshat (literal) |
 | 3 | Spec | Domain | Peshat (literal) |
 | 4 | Spec | Capabilities | Remez (allusive) |
 | 5 | Spec | Contracts | Remez (allusive) |
@@ -34,7 +34,7 @@ When step 15 is executed, we return to step 1 — is the intent still valid? The
 
 The layer where intent is captured in direct language, without metaphor or allusion.
 
-- **Purpose** (steps 1-2) answers *why this system should exist, for whom, and what it expressly is not*. The *non-purpose* is as important as the purpose — it delimits the scope and protects against *feature creep*.
+- **Intent** (steps 1-2) answers *why this system should exist, for whom, and what it expressly is not*. The *non-intent* is as important as the purpose — it delimits the scope and protects against *feature creep*.
 - **Domain** (step 3) captures the concepts, rules and constraints of the real problem. It is not class modelling; it is modelling of the world the code is going to represent.
 
 ## Remez — the allusive (steps 4-5)
@@ -100,7 +100,7 @@ Interpreting the fifteen steps as a mandatory order blocks the work. The chain i
 
 **Writing all *specs* with the same degree of detail**
 
-Not all fifteen receive the same investment. Purpose and Contracts almost always deserve density; Observability can be one line for a local CLI and twenty pages for a multi-region platform. The criterion is the cost of being wrong, not completeness for its own sake.
+Not all fifteen receive the same investment. Intent and Contracts almost always deserve density; Observability can be one line for a local CLI and twenty pages for a multi-region platform. The criterion is the cost of being wrong, not completeness for its own sake.
 
 </div>
 

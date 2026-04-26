@@ -1,9 +1,9 @@
 /* PARDES — estilo próprio mínimo. Evoluiremos quando tivermos design definido. */
 
 :root {
-	--sl-color-accent: #4a3b7c;
-	--sl-color-accent-high: #6d58b3;
-	--sl-color-accent-low: #1e1636;
+	--sl-color-accent: #6d58b3;
+	--sl-color-accent-high: #9d83e8;
+	--sl-color-accent-low: #2a1f4f;
 }
 
 /* Tipografia mais próxima de texto literário para combinar com o tom hermenêutico */
@@ -20,4 +20,107 @@ html[data-theme='dark'] {
 	margin: 2rem 0;
 	border-left: 3px solid var(--sl-color-accent);
 	padding-left: 1rem;
+}
+
+/* ============================================================
+ * Hero da homepage — "PARDES" gigante em serif para puxar tom
+ * hermenêutico/manifesto, em vez do sans-serif default do Starlight.
+ * ========================================================== */
+.hero h1,
+.hero .hero-html h1 {
+	font-family: Georgia, 'Times New Roman', serif;
+	font-weight: 600;
+	letter-spacing: -0.02em;
+	line-height: 1.05;
+}
+
+.hero .tagline {
+	font-style: italic;
+	font-weight: 400;
+	max-width: 38ch;
+	line-height: 1.5;
+	color: var(--sl-color-gray-2);
+}
+
+/* Badge discreto de versão da CLI no topo da página /cli/ */
+.cli-version-badge {
+	display: inline-block;
+	font-size: 0.85rem;
+	color: var(--sl-color-gray-3);
+	background: var(--sl-color-gray-6);
+	border: 1px solid var(--sl-color-gray-5);
+	border-radius: 999px;
+	padding: 0.25rem 0.85rem;
+	margin: 0 0 1.5rem;
+	letter-spacing: 0.01em;
+}
+
+.cli-version-badge strong {
+	color: var(--sl-color-accent-high);
+	font-weight: 600;
+}
+
+.cli-version-badge a {
+	color: inherit;
+	text-decoration: underline;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
+}
+
+/* CardGrid stagger — mais respiração entre cards na homepage */
+.card-grid {
+	gap: 1.75rem !important;
+}
+
+.card-grid .card {
+	padding: 1.5rem 1.5rem 1.25rem;
+}
+
+/* ============================================================
+ * Site title no header — "pardes.pro"
+ * Tom de marca tipográfica: serif clássica para a primeira parte,
+ * domínio destacado em cor accent, letter-spacing ajustado para
+ * parecer logotipo em vez de texto cru.
+ * ========================================================== */
+.site-title,
+a[class*='SiteTitle'],
+header a[href$='/'] {
+	font-family: Georgia, 'Times New Roman', serif;
+	font-weight: 600;
+	font-size: 1.35rem;
+	letter-spacing: -0.01em;
+	background: linear-gradient(
+		90deg,
+		var(--sl-color-text) 0%,
+		var(--sl-color-text) 60%,
+		var(--sl-color-accent-high) 60%,
+		var(--sl-color-accent-high) 100%
+	);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-decoration: none !important;
+	transition: opacity 0.2s ease;
+}
+
+.site-title:hover,
+a[class*='SiteTitle']:hover,
+header a[href$='/']:hover {
+	opacity: 0.85;
+}
+
+/* Modo escuro: tons mais quentes para destacar */
+html[data-theme='dark'] .site-title,
+html[data-theme='dark'] a[class*='SiteTitle'],
+html[data-theme='dark'] header a[href$='/'] {
+	background: linear-gradient(
+		90deg,
+		#f0f0f0 0%,
+		#f0f0f0 60%,
+		var(--sl-color-accent-high) 60%,
+		#9d83e8 100%
+	);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
 }

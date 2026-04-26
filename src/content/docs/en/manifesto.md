@@ -5,64 +5,51 @@ description: Why PARDES — the fundamental thesis of the methodology, by Leonar
 
 *By Leonardo Mendonça. Initial version — 21 April 2026.*
 
-> **Peshat, Remez, Drash, Sod — the four layers of intent in software.**
-
 ## 1. The single premise
 
 There is one sentence that sustains everything that follows:
 
 **The only exclusively human act in software development is intent.**
 
-*"I want this to exist for this purpose."* Only that. Everything else — domain design, contracts, code, tests, deploy, metrics, evolution — is derivable by agents, human or artificial, provided the original intent has been captured faithfully.
+*"I want this to exist for this purpose."* Only that. Everything else — domain design, contracts, code, tests, *deploy*, metrics, evolution — is derivable by agents, human or artificial, provided the original intent has been captured faithfully.
 
 The historical problem of software development is not that this derivation chain did not exist — it always existed, stumbling through someone's head. The problem is that it lived implicit, compartmentalised, and unverifiable. PARDES makes it explicit, linked, and re-evaluable at every step.
 
-## 2. The name
+## 2. The four phases of a system
 
-*PARDES* comes from the Jewish hermeneutic tradition. It is a classical acronym for four layers of interpreting sacred texts:
+A software system, from birth to death, passes through four phases. They are not a rigid sequence — they are layers of different nature that coexist at distinct maturities throughout the life of the code.
 
-- **Peshat** (פְּשָׁט) — the literal, simple sense
-- **Remez** (רֶמֶז) — the allusive sense, which points without yet revealing
-- **Drash** (דְּרַשׁ) — the interpretive sense, sought, worked
-- **Sod** (סוֹד) — the mystical sense, which reveals itself only to those who live the text
+**The literal.** The raw purpose. Why it exists, for whom, what value it delivers, what value it expressly *does not* deliver. It is also the domain: what concepts, rules, and constraints of the real world this system will represent. Without this pinned down, nothing else has ground. In PARDES, this layer corresponds to the **Intent** and **Domain** *specs*.
 
-The Hebrew word means *orchard* or *garden* — it is the etymological root of *paradise*. It captures the idea that a sacred text, like a garden, has layers that unveil themselves over time to those who inhabit it.
+**The allusive.** Everything that purpose points to without yet materialising. The capabilities the system needs to have, the contracts it needs to honour. There is direction, there is not yet code. In PARDES, **Capabilities** and **Contracts**.
 
-I adopt the term as an operational metaphor, with respect for the original tradition. The human intent that gives rise to a software system is, for those who build it, a founding text. It has literal, allusion, interpretation, and emergence. The PARDES methodology organises this unveiling into fifteen concrete steps.
+**The interpretive.** Where intent passes through the filter of material reality and is translated into engineering decisions. *Guardrails*, who executes what, concrete code, tests that verify. It is the most visible layer of the craft. In PARDES, **Behaviour**, **Orchestration**, **Implementation**, and **Validation**.
 
-## 3. The four layers applied to software
+**The emergent.** The sense that only reveals itself when the system lives in real operation. How it behaves under load, what observability teaches, how it ages, when it should be re-evaluated or discontinued. It is the most humble layer — the one that recognises that the system, once placed in the world, has a life of its own that the author cannot entirely predict. In PARDES, **Deployment**, **Observability**, **Operation**, and **Evolution**.
 
-**Peshat — the literal.** It is the raw purpose of the application. Why it exists. For whom. What value it delivers. What value, expressly, it does *not* deliver. This layer corresponds to the first two specs of the PARDES chain: **Purpose** and **Domain**. Without it, nothing else has ground.
+The execution steps — putting code on the network, running tests, deploying, operating — alternate with the *specs*. The chain breathes between intent and matter. When Evolution is executed, we return to Intent: *is intent still valid?* The method is a cycle, not a line.
 
-**Remez — the allusive.** It is everything that the purpose points to without yet realising. The capabilities the system needs to have, the contracts it needs to honour. There is direction, there is no materialisation yet. This corresponds to **Capabilities** and **Contracts**.
+## 3. What PARDES is not
 
-**Drash — the interpretive.** It is where intent passes through the filter of material reality and is translated into engineering decisions. Guardrails and limits, who executes what, concrete code, tests that verify. Here live **Behaviour**, **Orchestration**, **Implementation**, and **Validation**. Drash is the most visible layer of the craft.
+It is not *waterfall*. It does not require a complete *spec* before code. Detailed *specs* appear when the system justifies it, not before.
 
-**Sod — the emergent.** It is the sense that only reveals itself when the system lives in real operation. How it behaves under load, what observability teaches, how it ages, when it should be re-evaluated or discontinued. **Deployment**, **Observability**, **Operation**, and **Evolution**. It is the most humble layer — the one that recognises that the system, once placed in the world, has a life of its own that the author cannot entirely predict.
+It is not *Big Design Up Front*. The method is a taxonomy of artefacts, not a rigid sequence of approval. Code is written at any moment, provided intent is clear. The *spec* formalises what was already known; it does not prevent starting.
 
-The execution steps — putting code on the network, running tests, deploying, operating — alternate with the specs. The chain breathes between intent and matter.
-
-## 4. What PARDES is not
-
-It is not *waterfall*. It does not require a complete spec before code. Detailed specs appear when the system justifies it, not before.
-
-It is not *Big Design Up Front*. The method is a taxonomy of artefacts, not a rigid sequence of approval. Code is written at any moment, provided intent is clear. The spec formalises what was already known; it does not prevent starting.
-
-It is not *documentation*. Documentation serves a future human reader. Spec serves a derivable decision. Different languages, for different audiences.
+It is not *documentation*. Documentation serves a future human reader. *Spec* serves a derivable decision. Different languages, for different audiences.
 
 It is not *anti-code*. Code remains the central artefact of execution. What changes is that it ceases to be the only record of intent.
 
-It is not a *substitute for the dev*. The developer does not disappear. They gain two layers of contribution: capturing intent faithfully, and guiding the chain when some derived spec strays from the purpose.
+It is not a *substitute for the dev*. The developer does not disappear. They gain two layers of contribution: capturing intent faithfully, and guiding the chain when some derived *spec* strays from the purpose.
 
-## 5. Why this matters now
+## 4. Why this matters now
 
 In the last three years, software development entered a phase in which a good part of technical tasks — writing code, writing tests, writing configuration, writing documentation — became accelerable by five to ten times by well-oriented artificial intelligence agents. The limit has ceased to be production speed. The limit is the clarity of intent and the fidelity of its propagation throughout the lifecycle.
 
-Teams that learn to capture intent with rigour and establish a revisitable chain between intent and production will multiply their output. Teams that treat intent as implicit will rapidly produce wrong artefacts at scale.
+Teams that learn to capture intent with rigour and establish a revisitable chain between intent and production will multiply their *output*. Teams that treat intent as implicit will rapidly produce wrong artefacts at scale.
 
-PARDES is not a prophecy. It is a discipline. There are those who have been applying it for years without giving it a name. I worked the last two years in parallel on several projects of great complexity to build the version I share here. I call it PARDES because the metaphor of the four layers of reading matches what I saw happen every day: a clear intent at the top, a chain of specs and executions deriving from it, and a system in operation teaching me — always — layers of meaning I had not foreseen.
+PARDES is not a prophecy. It is a discipline. There are those who have been applying it for years without giving it a name. I worked the last two years in parallel on several projects of great complexity to build the version I share here. I call it PARDES because the four-layer structure matches what I saw happen every day: a clear intent at the top, a chain of *specs* and executions deriving from it, and a system in operation teaching me — always — meanings I had not foreseen.
 
-## 6. Who writes this
+## 5. Who writes this
 
 I am Leonardo Mendonça. Software architect. For years I have worked on critical systems, in lifecycles that cross dense legacy and new construction. PARDES is the distillation of what has worked in my daily practice, organised in a format I hope can serve other professionals who feel the same discomfort with previous methods.
 
@@ -70,4 +57,12 @@ This site is the starting point. I will add material as the work justifies it. I
 
 ---
 
-*Next reading: [Onboarding in 1 day](/en/metodo/onboarding/). Those who prefer to understand first the origin of the name: [About the name](/en/sobre-o-nome/). Those who want to know who is writing: [About the author](/en/sobre-o-autor/).*
+## Appendix — Origin of the name
+
+*PARDES* is not an invented acronym. It is a term borrowed from the Jewish hermeneutic tradition, where it designates four layers of reading of sacred texts. The metaphor matches the four-layer structure that the method proposes — literal, allusive, interpretive, emergent — and the name stuck.
+
+For those who want to understand the origin carefully, there is a dedicated page: [About the name](/en/sobre-o-nome/). For all other practical purposes, **PARDES is what is described above**: a method for making human intent explicit, linked, and revisitable throughout the software lifecycle.
+
+---
+
+*Next reading: [Why your AI keeps missing](/en/diagnostico/) — the diagnosis of the problem this method solves. Or [Start in 1 hour](/en/metodo/onboarding/) if you're already convinced.*

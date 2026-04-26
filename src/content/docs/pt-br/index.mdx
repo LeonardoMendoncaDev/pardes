@@ -1,39 +1,48 @@
 ---
 title: PARDES
-description: Metodologia hermenêutica de desenvolvimento orientado pela intenção, por Leonardo Mendonça.
+description: Para o dev que quer fazer a IA entregar com previsibilidade, não com sorte. Um método para transformar intenção humana em código previsível.
 template: splash
 hero:
-  tagline: Peshat, Remez, Drash, Sod — as quatro camadas da intenção no software.
+  tagline: Para o dev que quer fazer a IA entregar com previsibilidade, não com sorte.
   actions:
-    - text: Ler o manifesto
-      link: /pt-br/manifesto/
+    - text: Ler o diagnóstico
+      link: /pt-br/diagnostico/
       icon: right-arrow
-    - text: Começar em 1 dia
+    - text: Começar com pardes init
       link: /pt-br/metodo/onboarding/
+      icon: right-arrow
+      variant: minimal
+    - text: Instalar a CLI
+      link: /pt-br/cli/instalar/
       icon: right-arrow
       variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Por que PARDES
+## O problema que PARDES resolve
 
 <CardGrid stagger>
+	<Card title="A inconsistência mata a confiança" icon="warning">
+		Você usa Claude, Cursor ou Copilot há meses. Num dia entrega em duas horas o que demoraria uma semana.
+		No dia seguinte gasta a tarde inteira corrigindo um *output* que parecia certo. A causa quase nunca
+		é o modelo — é a intenção que não foi fixada antes do *prompt*.
+	</Card>
 	<Card title="A intenção primeiro" icon="star">
-		O único ato exclusivamente humano no desenvolvimento de software é a intenção.
-		Tudo o mais é uma cadeia de specs que pode ser derivada, criticada e revisitada.
+		O único ato exclusivamente humano no desenvolvimento de software é dizer *para que isto existe*.
+		Todo o resto — desenho, contratos, código, testes, *deploy* — pode ser derivado por agentes,
+		desde que essa intenção tenha sido capturada com fidelidade.
 	</Card>
 	<Card title="Quinze passos encadeados" icon="list-format">
-		Do Propósito à Evolução, quinze passos alternando spec e execução,
-		da intenção literal à operação emergente.
+		Da Intenção à Evolução, quinze passos que alternam *spec* e execução. Não é *waterfall*,
+		não é documentação burocrática, não é cerimônia. É a cadeia que faz a IA entregar com
+		previsibilidade em vez de sorte.
 	</Card>
-	<Card title="Hermenêutica aplicada" icon="open-book">
-		PaRDeS — Peshat, Remez, Drash, Sod. Quatro camadas de leitura
-		da tradição interpretativa judaica aplicadas ao ciclo de vida do software.
-	</Card>
-	<Card title="Para profissionais" icon="rocket">
-		Não é waterfall. Não é documentação burocrática. É disciplina de artesão
-		que sabe que o código é um artefato entre muitos.
+	<Card title="Em 2 minutos com pardes init" icon="rocket">
+		Você não precisa aprender o método inteiro antes de começar. Roda `pardes init` numa *feature*
+		sua, escolhe seu agente de IA — Claude Code, Cursor, Windsurf, Copilot, Gemini, Aider —
+		cola com Cmd+V, e o agente assume a entrevista profunda com você. Sai sentindo o método
+		na intuição. [Conhecer a CLI →](/pt-br/cli/)
 	</Card>
 </CardGrid>
 

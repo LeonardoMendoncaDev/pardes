@@ -7,7 +7,7 @@ export default defineConfig({
 	site: 'https://pardes.pro',
 	integrations: [
 		starlight({
-			title: 'PARDES',
+			title: 'pardes.pro',
 			description: 'Metodologia hermenêutica de desenvolvimento orientado pela intenção, por Leonardo Mendonça.',
 			defaultLocale: 'root',
 			locales: {
@@ -31,12 +31,18 @@ export default defineConfig({
 				{ tag: 'meta', attrs: { name: 'twitter:description', content: 'Metodologia hermenêutica de desenvolvimento orientado pela intenção, por Leonardo Mendonça.' } },
 				// Autor
 				{ tag: 'meta', attrs: { name: 'author', content: 'Leonardo Mendonça' } },
+				// Abre links externos numa aba nova (incluindo o ícone do GitHub
+				// no header). Mantém os links internos a navegar normalmente.
+				{
+					tag: 'script',
+					content: `document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('a[href^="http"]').forEach(a=>{try{if(new URL(a.href).host!==location.host){a.target='_blank';a.rel='noopener noreferrer';}}catch(e){}});});`,
+				},
 			],
 			social: [
 				{
 					icon: 'github',
 					label: 'GitHub',
-					href: 'https://github.com/leonardomendoncadev/pardes',
+					href: 'https://github.com/LeonardoMendoncaDev/pardes-cli',
 				},
 			],
 			editLink: {
@@ -54,9 +60,9 @@ export default defineConfig({
 							link: '/manifesto/',
 						},
 						{
-							label: 'Sobre o nome',
-							translations: { 'pt-BR': 'Sobre o nome', 'en': 'About the name' },
-							link: '/sobre-o-nome/',
+							label: 'Porque é que a tua IA falha?',
+							translations: { 'pt-BR': 'Por que sua IA falha?', 'en': 'Why your AI keeps missing?' },
+							link: '/diagnostico/',
 						},
 						{
 							label: 'O método',
@@ -64,21 +70,55 @@ export default defineConfig({
 							collapsed: false,
 							items: [
 								{
-									label: 'Onboarding em 1 dia',
-									translations: { 'pt-BR': 'Onboarding em 1 dia', 'en': 'Onboarding in 1 day' },
+									label: 'Começar com pardes init',
+									translations: { 'pt-BR': 'Começar com pardes init', 'en': 'Start with pardes init' },
 									link: '/metodo/onboarding/',
 								},
-								{
-									label: 'A cadeia de 15 passos',
-									translations: { 'pt-BR': 'A cadeia de 15 passos', 'en': 'The 15-step chain' },
-									link: '/metodo/cadeia/',
-								},
-								{
-									label: 'O teste das 3 frases',
-									translations: { 'pt-BR': 'O teste das 3 frases', 'en': 'The three-sentence test' },
-									link: '/metodo/teste-3-frases/',
-								},
 							],
+						},
+					],
+				},
+				{
+					label: 'PARDES CLI',
+					translations: { 'pt-BR': 'PARDES CLI', 'en': 'PARDES CLI' },
+					collapsed: false,
+					items: [
+						{
+							label: 'Visão geral',
+							translations: { 'pt-BR': 'Visão geral', 'en': 'Overview' },
+							link: '/cli/',
+						},
+						{
+							label: 'Instalar',
+							translations: { 'pt-BR': 'Instalar', 'en': 'Install' },
+							link: '/cli/instalar/',
+						},
+						{
+							label: 'O comando',
+							translations: { 'pt-BR': 'O comando', 'en': 'The command' },
+							link: '/cli/comandos/',
+						},
+						{
+							label: 'Exemplos',
+							translations: { 'pt-BR': 'Exemplos', 'en': 'Examples' },
+							link: '/cli/exemplos/',
+						},
+					],
+				},
+				{
+					label: 'Aprofundar',
+					translations: { 'pt-BR': 'Aprofundar', 'en': 'Go deeper' },
+					collapsed: true,
+					items: [
+						{
+							label: 'O mapa completo',
+							translations: { 'pt-BR': 'O mapa completo', 'en': 'The full map' },
+							link: '/metodo/cadeia/',
+						},
+						{
+							label: 'O teste das 3 frases',
+							translations: { 'pt-BR': 'O teste das 3 frases', 'en': 'The three-sentence test' },
+							link: '/metodo/teste-3-frases/',
 						},
 					],
 				},
@@ -90,6 +130,16 @@ export default defineConfig({
 							label: 'Sobre o autor',
 							translations: { 'pt-BR': 'Sobre o autor', 'en': 'About the author' },
 							link: '/sobre-o-autor/',
+						},
+						{
+							label: 'Sobre o nome',
+							translations: { 'pt-BR': 'Sobre o nome', 'en': 'About the name' },
+							link: '/sobre-o-nome/',
+						},
+						{
+							label: 'Apoiar',
+							translations: { 'pt-BR': 'Apoiar', 'en': 'Support' },
+							link: '/apoiar/',
 						},
 					],
 				},

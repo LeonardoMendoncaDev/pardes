@@ -13,7 +13,7 @@ A cadeia não é uma sequência rígida. É uma **taxonomia** — um mapa do que
 
 | Passo | Tipo | Nome | Camada PaRDeS |
 |-------|------|------|----------------|
-| 1-2 | Spec | Propósito | Peshat (literal) |
+| 1-2 | Spec | Intenção | Peshat (literal) |
 | 3 | Spec | Domínio | Peshat (literal) |
 | 4 | Spec | Capacidades | Remez (alusivo) |
 | 5 | Spec | Contratos | Remez (alusivo) |
@@ -34,7 +34,7 @@ Quando o passo 15 é executado, volta-se ao passo 1 — a intenção ainda é v�
 
 A camada onde a intenção é capturada em linguagem direta, sem metáfora nem alusão.
 
-- **Propósito** (passos 1-2) responde a *por que este sistema deve existir, para quem, e o que ele expressamente não é*. O *não-propósito* é tão importante quanto o propósito — delimita o escopo e protege contra *feature creep*.
+- **Intenção** (passos 1-2) responde a *por que este sistema deve existir, para quem, e o que ele expressamente não é*. O *não-intenção* é tão importante quanto o propósito — delimita o escopo e protege contra *feature creep*.
 - **Domínio** (passo 3) captura os conceitos, regras e restrições do problema real. Não é modelagem de classes; é modelagem do mundo que o código vai representar.
 
 ## Remez — o alusivo (passos 4-5)
@@ -100,7 +100,7 @@ Interpretar os quinze passos como ordem obrigatória trava o trabalho. A cadeia 
 
 **Escrever todas as *specs* com o mesmo grau de detalhe**
 
-Todas as quinze não recebem o mesmo investimento. Propósito e Contratos quase sempre merecem densidade; Observabilidade pode ser uma linha para um CLI local e vinte páginas para uma plataforma multi-região. O critério é o custo de se enganar, não a completude por si.
+Todas as quinze não recebem o mesmo investimento. Intenção e Contratos quase sempre merecem densidade; Observabilidade pode ser uma linha para um CLI local e vinte páginas para uma plataforma multi-região. O critério é o custo de se enganar, não a completude por si.
 
 </div>
 

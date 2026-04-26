@@ -1,39 +1,49 @@
 ---
 title: PARDES
-description: A hermeneutic methodology for intent-driven software development, by Leonardo Mendonça.
+description: For the dev who wants AI to deliver with predictability, not luck. A method to turn human intent into predictable code.
 template: splash
 hero:
-  tagline: Peshat, Remez, Drash, Sod — the four layers of intent in software.
+  tagline: For the dev who wants AI to deliver with predictability, not luck.
   actions:
-    - text: Read the manifesto
-      link: /en/manifesto/
+    - text: Read the diagnosis
+      link: /en/diagnostico/
       icon: right-arrow
-    - text: Start in 1 day
+    - text: Start with pardes init
       link: /en/metodo/onboarding/
+      icon: right-arrow
+      variant: minimal
+    - text: Install the CLI
+      link: /en/cli/instalar/
       icon: right-arrow
       variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Why PARDES
+## The problem PARDES solves
 
 <CardGrid stagger>
+	<Card title="Inconsistency kills trust" icon="warning">
+		You've been using Claude, Cursor, or Copilot for months. One day you ship in two hours
+		what would have taken a week. The next day you burn the whole afternoon fixing an *output*
+		that looked right. The cause is almost never the model — it's the intent that wasn't pinned
+		down before the *prompt*.
+	</Card>
 	<Card title="Intent first" icon="star">
-		The only exclusively human act in software development is intent.
-		Everything else is a chain of specs that can be derived, critiqued and revisited.
+		The only exclusively human act in software development is saying *what this exists for*.
+		Everything else — design, contracts, code, tests, *deploy* — can be derived by agents,
+		provided that intent has been captured faithfully.
 	</Card>
 	<Card title="Fifteen linked steps" icon="list-format">
-		From Purpose to Evolution, fifteen steps alternating spec and execution,
-		from literal intent to emergent operation.
+		From Intent to Evolution, fifteen steps alternating *spec* and execution. Not *waterfall*,
+		not bureaucratic documentation, not ceremony. It's the chain that makes AI deliver with
+		predictability instead of luck.
 	</Card>
-	<Card title="Applied hermeneutics" icon="open-book">
-		PaRDeS — Peshat, Remez, Drash, Sod. Four layers of reading
-		from the Jewish interpretive tradition applied to the software lifecycle.
-	</Card>
-	<Card title="For professionals" icon="rocket">
-		It is not waterfall. It is not bureaucratic documentation. It is craftsman's discipline
-		that knows code is one artefact among many.
+	<Card title="In 2 minutes with pardes init" icon="rocket">
+		You don't have to learn the whole method before starting. You run `pardes init` on one of
+		your own *features*, pick your AI agent — Claude Code, Cursor, Windsurf, Copilot, Gemini,
+		Aider — paste with Cmd+V, and the agent takes over the deep interview with you. You walk
+		out feeling the method in your gut. [Get to know the CLI →](/en/cli/)
 	</Card>
 </CardGrid>
 

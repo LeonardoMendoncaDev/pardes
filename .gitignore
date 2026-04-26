@@ -19,3 +19,6 @@ pnpm-debug.log*
 
 # macOS-specific files
 .DS_Store
+
+# Local Claude Code context — instructions/memory, never publish
+CLAUDE.md
